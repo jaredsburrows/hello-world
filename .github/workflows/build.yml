@@ -63,6 +63,15 @@ jobs:
         run: javac HelloWorld.java && java HelloWorld
         working-directory: ./java
 
+      - name: Configure Node 14
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14
+
+      - name: JavaScript
+        run: node HelloWorld.js
+        working-directory: ./javascript
+
       - name: Configure Kotlin 1.7.0
         uses: fwilhe2/setup-kotlin@0.3.0
         with:

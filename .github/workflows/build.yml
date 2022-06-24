@@ -59,6 +59,16 @@ jobs:
         run: kotlinc HelloWorld.kt && kotlin HelloWorldKt
         working-directory: ./kotlin
 
+      - name: Configure Python 3.8.13
+        uses: actions/setup-python@v4.0.0
+        with:
+          python-version: 3.8.13
+          architecture: x64
+
+      - name: Python
+        run: python HelloWorld.py
+        working-directory: ./python
+
       - name: Configure Swift "latest"
         uses: swift-actions/setup-swift@v1
 

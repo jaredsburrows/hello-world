@@ -58,3 +58,10 @@ jobs:
       - name: Kotlin
         run: kotlinc HelloWorld.kt && kotlin HelloWorldKt
         working-directory: ./kotlin
+
+      - name: Configure Swift "latest"
+        uses: swift-actions/setup-swift@v1
+
+      - name: Swift
+        run: swiftc HelloWorld.swift && ./HelloWorld
+        working-directory: ./swift

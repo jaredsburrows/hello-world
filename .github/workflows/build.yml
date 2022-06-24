@@ -30,6 +30,10 @@ jobs:
         run: g++ HelloWorld.cpp -o HelloWorld && ./HelloWorld
         working-directory: ./cpp
 
+      - name: C#
+        run: csc HelloWorld.cs && mono HelloWorld.exe
+        working-directory: ./c#
+
       - name: Configure Go 1.18.3
         uses: actions/setup-go@v3
         with:

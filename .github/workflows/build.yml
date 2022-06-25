@@ -91,6 +91,16 @@ jobs:
         run: python HelloWorld.py
         working-directory: ./python
 
+      - name: Configure Ruby 3.0
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.0
+          bundler-cache: true
+
+      - name: Ruby
+        run: ruby HelloWorld.rb
+        working-directory: ./ruby
+
       - name: Configure Swift "latest"
         uses: swift-actions/setup-swift@v1
 

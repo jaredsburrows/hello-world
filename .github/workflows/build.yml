@@ -101,6 +101,15 @@ jobs:
         run: ruby HelloWorld.rb
         working-directory: ./ruby
 
+      - name: Confgure Rust
+        uses: ATiltedTree/setup-rust@v1.0.5
+        with:
+          rust-version: stable
+
+      - name: Rust
+        run: rustc HelloWorld.rs && ./HelloWorld
+        working-directory: ./rust
+
       - name: Configure Swift "latest"
         uses: swift-actions/setup-swift@v1
 

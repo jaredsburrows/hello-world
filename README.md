@@ -16,6 +16,7 @@ Compiling "Hello, World!" in multiple languages with Github Actions.
 | [Kotlin](https://kotlinlang.org/)                      | kotlinc       | [fwilhe2/setup-kotlin](https://github.com/fwilhe2/setup-kotlin)                   |
 | [Perl](https://www.perl.org/)                          | perl          | [shogo82148/actions-setup-perl](https://github.com/shogo82148/actions-setup-perl) |
 | [Python](https://www.python.org/)                      | python        | [actions/setup-python](https://github.com/actions/setup-python) (Official)        |
+| [R](https://www.r-project.org/)                        | Rscript       | [r-lib/actions/setup-r](https://github.com/r-lib/actions) (Official)              |
 | [Ruby](https://www.ruby-lang.org/en/)                  | ruby          | [ruby/setup-ruby](https://github.com/ruby/setup-ruby) (Official)                  |
 | [Rust](https://www.rust-lang.org/)                     | rustc         | [ATiltedTree/setup-rust](https://github.com/ATiltedTree/setup-rust) (Official)    |
 | [Swift](https://www.swift.org/)                        | swiftc        | [swift-actions/setup-swift](https://github.com/swift-actions/setup-swift)         |

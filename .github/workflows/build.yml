@@ -81,6 +81,13 @@ jobs:
         run: kotlinc HelloWorld.kt && kotlin HelloWorldKt
         working-directory: ./kotlin
 
+      - name: Configure Lisp
+        uses: 40ants/setup-lisp@v2
+
+      - name: Lisp
+        run: sbcl --script HelloWorld.lisp
+        working-directory: ./lisp
+
       - name: Configure Clang "latest"
         uses: egor-tensin/setup-clang@v1
         with:

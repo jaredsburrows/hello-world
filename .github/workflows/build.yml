@@ -81,6 +81,17 @@ jobs:
         run: kotlinc HelloWorld.kt && kotlin HelloWorldKt
         working-directory: ./kotlin
 
+      - name: Configure Clang "latest"
+        uses: egor-tensin/setup-clang@v1
+        with:
+          version: latest
+          platform: x64
+          cc: 1
+
+      - name: Objective-C
+        run: clang HelloWorld.m -o HelloWorld && ./HelloWorld
+        working-directory: ./objective-c
+
       - name: Configure Perl 5.34
         uses: shogo82148/actions-setup-perl@v1.16.0
         with:

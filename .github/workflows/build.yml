@@ -53,6 +53,15 @@ jobs:
         run: go build HelloWorld.go && ./HelloWorld
         working-directory: ./go
 
+      - name: Configure Haskell 8.8.4
+        uses: haskell/actions/setup@v2
+        with:
+          ghc-version: 8.8.4
+
+      - name: Haskell
+        run: ghc HelloWorld.hs -o HelloWorld && ./HelloWorld
+        working-directory: ./haskell
+
       - name: Configure JDK 11
         uses: actions/setup-java@v3.4.0
         with:

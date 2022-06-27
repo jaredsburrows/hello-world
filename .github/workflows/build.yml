@@ -153,6 +153,13 @@ jobs:
         run: rustc HelloWorld.rs && ./HelloWorld
         working-directory: ./rust
 
+      - name: Configure Scala "latest"
+        uses: olafurpg/setup-scala@v13
+
+      - name: Scala
+        run: sbt run
+        working-directory: ./scala
+
       - name: Configure Swift "latest"
         uses: swift-actions/setup-swift@v1
 

@@ -30,6 +30,13 @@ jobs:
         run: gcc HelloWorld.c -o HelloWorld && ./HelloWorld
         working-directory: ./c
 
+      - name: Configure Cobol "stable"
+        uses: fabasoad/setup-cobol-action@v1.0.17
+
+      - name: Cobol
+        run: cobc -x -free -o HelloWorld HelloWorld.cbl && ./HelloWorld
+        working-directory: ./cobol
+
       - name: C++
         run: g++ HelloWorld.cpp -o HelloWorld && ./HelloWorld
         working-directory: ./cpp

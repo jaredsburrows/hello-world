@@ -97,6 +97,15 @@ jobs:
         run: kotlinc HelloWorld.kt && kotlin HelloWorldKt
         working-directory: ./kotlin
 
+      - name: Configure Lua 5.3.5
+        uses: xpol/setup-lua@v0.3
+        with:
+          lua-version: 5.3.5
+
+      - name: Lua
+        run: lua HelloWorld.lua
+        working-directory: ./lua
+
       - name: Configure Clang "latest"
         uses: egor-tensin/setup-clang@v1
         with:

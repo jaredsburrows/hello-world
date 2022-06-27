@@ -159,3 +159,7 @@ jobs:
       - name: Swift
         run: swiftc HelloWorld.swift && ./HelloWorld
         working-directory: ./swift
+
+      - name: TypeScript
+        run: node HelloWorld.ts
+        working-directory: ./typescript

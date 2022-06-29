@@ -118,7 +118,7 @@ jobs:
         working-directory: ./objective-c
 
       - name: Configure Perl 5.34
-        uses: shogo82148/actions-setup-perl@v1.16.0
+        uses: shogo82148/actions-setup-perl@v1.16.1
         with:
           perl-version: 5.34
 

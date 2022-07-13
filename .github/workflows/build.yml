@@ -127,7 +127,7 @@ jobs:
         working-directory: ./perl
 
       - name: Configure Python 3.8.13
-        uses: actions/setup-python@v4.0.0
+        uses: actions/setup-python@v4.1.0
         with:
           python-version: 3.8.13
           architecture: x64

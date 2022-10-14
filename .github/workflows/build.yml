@@ -144,7 +144,7 @@ jobs:
         working-directory: ./r
 
       - name: Configure Racket 8.5
-        uses: Bogdanp/setup-racket@v1.8.1
+        uses: Bogdanp/setup-racket@v1.9
         with:
           architecture: x64
           distribution: full

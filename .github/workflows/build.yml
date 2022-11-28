@@ -31,7 +31,7 @@ jobs:
         working-directory: ./c
 
       - name: Configure Cobol "stable"
-        uses: fabasoad/setup-cobol-action@v1.1.0
+        uses: fabasoad/setup-cobol-action@v1.4.1
 
       - name: Cobol
         run: cobc -x -free -o HelloWorld HelloWorld.cbl && ./HelloWorld

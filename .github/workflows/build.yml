@@ -89,7 +89,7 @@ jobs:
         working-directory: ./javascript
 
       - name: Configure Kotlin 1.7.0
-        uses: fwilhe2/setup-kotlin@0.4.0
+        uses: fwilhe2/setup-kotlin@0.5.0
         with:
           version: 1.7.0
 

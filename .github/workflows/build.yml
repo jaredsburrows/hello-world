@@ -50,6 +50,15 @@ jobs:
         run: dart HelloWorld.dart
         working-directory: ./dart
 
+      - name: Configure Erlang 25.2
+        uses: erlef/setup-beam@v1.15.2
+        with:
+          otp-version: 25.2
+
+      - name: Erlang
+        run: erlc helloworld.erl && erl -noshell -s helloworld start -s init stop
+        working-directory: ./erlang
+
       - name: Configure Go 1.18.3
         uses: actions/setup-go@v3
         with:

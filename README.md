@@ -1,4 +1,4 @@
-# Hello World!
+# Hello, World!
 
 [![build](https://github.com/jaredsburrows/hello-world/actions/workflows/build.yml/badge.svg)](https://github.com/jaredsburrows/hello-world/actions/workflows/build.yml)
 
@@ -12,7 +12,7 @@ Compiling "Hello, World!" in multiple languages with Github Actions.
 | [Cobol](https://gnucobol.sourceforge.io/faq/index.html)                                                                                            | cobc          | [fabasoad/setup-cobol-action](https://github.com/fabasoad/setup-cobol-action)     |
 | [C++](https://isocpp.org/)                                                                                                                         | g++           | [egor-tensin/setup-gcc](https://github.com/egor-tensin/setup-gcc)                 |
 | [Dart](https://dart.dev/)                                                                                                                          | dart          | [dart-lang/setup-dart](https://github.com/dart-lang/setup-dart) (Official)        |
-| [Erlang](https://erlang.org)                                                                                                                       | rebar         | [erlef/setup-beam](https://github.com/erlef/setup-beam) (Official)                |
+| [Erlang](https://erlang.org)                                                                                                                       | erl           | [erlef/setup-beam](https://github.com/erlef/setup-beam) (Official)                |
 | [Go](https://go.dev/)                                                                                                                              | go            | [actions/setup-go](https://github.com/actions/setup-go) (Official)                |
 | [Haskell](https://haskell.org/)                                                                                                                    | ghc           | [haskell/actions/setup](https://github.com/haskell/actions) (Official)            |
 | [Java](https://java.com/en/)                                                                                                                       | javac         | [actions/setup-java](https://github.com/actions/setup-java) (Official)            |

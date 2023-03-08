@@ -86,6 +86,15 @@ jobs:
         run: go build HelloWorld.go && ./HelloWorld
         working-directory: ./go
 
+      - name: Configure Groovy
+        uses: wtfjoke/setup-groovy@v1.1.1
+        with:
+          groovy-version: 4.x # required
+
+      - name: Groovy
+        run: groovy HelloWorld.groovy
+        working-directory: ./groovy
+
       - name: Configure Haskell
         uses: haskell/actions/setup@v2
 

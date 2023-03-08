@@ -23,7 +23,7 @@ jobs:
         run: bash HelloWorld.sh
         working-directory: ./bash
 
-      - name: Configure GCC "latest"
+      - name: Configure GCC and G++
         uses: egor-tensin/setup-gcc@v1
         with:
           version: latest
@@ -34,7 +34,7 @@ jobs:
         run: gcc HelloWorld.c -o HelloWorld && ./HelloWorld
         working-directory: ./c
 
-      - name: Configure Cobol "stable"
+      - name: Configure Cobol
         uses: fabasoad/setup-cobol-action@v1.4.1
 
       - name: Cobol
@@ -45,7 +45,7 @@ jobs:
         run: g++ HelloWorld.cpp -o HelloWorld && ./HelloWorld
         working-directory: ./cpp
 
-      - name: Configure Dart "stable"
+      - name: Configure Dart
         uses: dart-lang/setup-dart@v1.4
         with:
           sdk: stable
@@ -54,96 +54,76 @@ jobs:
         run: dart HelloWorld.dart
         working-directory: ./dart
 
-      - name: Configure Erlang 25.2
+      - name: Configure Erlang
         uses: erlef/setup-beam@v1.15.2
         with:
-          otp-version: 25.2
+          otp-version: 25.2 # required
 
       - name: Erlang
         run: erlc helloworld.erl && erl -noshell -s helloworld start -s init stop
         working-directory: ./erlang
 
-      - name: Configure Go 1.18.3
+      - name: Configure Go
         uses: actions/setup-go@v3
-        with:
-          go-version: 1.18.3
-          check-latest: true
 
       - name: Go
         run: go build HelloWorld.go && ./HelloWorld
         working-directory: ./go
 
-      - name: Configure Haskell 8.8.4
+      - name: Configure Haskell
         uses: haskell/actions/setup@v2
-        with:
-          ghc-version: 8.8.4
 
       - name: Haskell
         run: ghc HelloWorld.hs -o HelloWorld && ./HelloWorld
         working-directory: ./haskell
 
-      - name: Configure JDK 11
+      - name: Configure JDK
         uses: actions/setup-java@v3.10.0
         with:
           distribution: temurin
-          java-version: 11
+          java-version: 19 # required
 
       - name: Java
         run: javac HelloWorld.java && java HelloWorld
         working-directory: ./java
 
-      - name: Configure Node 14
+      - name: Configure Node
         uses: actions/setup-node@v3
-        with:
-          node-version: 14
 
       - name: JavaScript
         run: node HelloWorld.js
         working-directory: ./javascript
 
-      - name: Configure Kotlin 1.7.0
+      - name: Configure Kotlin
         uses: fwilhe2/setup-kotlin@0.5.0
-        with:
-          version: 1.7.0
 
       - name: Kotlin
         run: kotlinc HelloWorld.kt && kotlin HelloWorldKt
         working-directory: ./kotlin
 
-      - name: Configure Lua 5.3.5
+      - name: Configure Lua
         uses: xpol/setup-lua@v0.3
-        with:
-          lua-version: 5.3.5
 
       - name: Lua
         run: lua HelloWorld.lua
         working-directory: ./lua
 
-      - name: Configure Clang "latest"
+      - name: Configure Clang
         uses: egor-tensin/setup-clang@v1
-        with:
-          version: latest
-          platform: x64
-          cc: 1
 
       - name: Objective-C
         run: clang HelloWorld.m -o HelloWorld && ./HelloWorld
         working-directory: ./objective-c
 
-      - name: Configure Perl 5.34
+      - name: Configure Perl
         uses: shogo82148/actions-setup-perl@v1.20.1
-        with:
-          perl-version: 5.34
 
       - name: Perl
         run: perl HelloWorld.pl
         working-directory: ./perl
 
-      - name: Configure Python 3.8.13
+      - name: Configure Python
         uses: actions/setup-python@v4.5.0
-        with:
-          python-version: 3.8.13
-          architecture: x64
 
       - name: Python
         run: python HelloWorld.py
@@ -159,19 +139,16 @@ jobs:
       - name: Configure Racket 8.5
         uses: Bogdanp/setup-racket@v1.9
         with:
-          architecture: x64
-          distribution: full
-          variant: CS
-          version: 8.5
+          version: 8.5 # required
 
       - name: Racket
         run: racket HelloWorld.rkt
         working-directory: ./racket
 
-      - name: Configure Ruby 3.0
+      - name: Configure Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.0
+          ruby-version: 3.0 # required
           bundler-cache: true
 
       - name: Ruby
@@ -181,13 +158,13 @@ jobs:
       - name: Confgure Rust
         uses: ATiltedTree/setup-rust@v1.0.5
         with:
-          rust-version: stable
+          rust-version: stable # required
 
       - name: Rust
         run: rustc HelloWorld.rs && ./HelloWorld
         working-directory: ./rust
 
-      - name: Configure Swift "latest"
+      - name: Configure Swift
         uses: swift-actions/setup-swift@v1
 
       - name: Swift

@@ -76,7 +76,7 @@ jobs:
           otp-version: 25.2 # required
 
       - name: Erlang
-        run: erlc helloworld.erl && erl -noshell -s helloworld start -s init stop
+        run: erlc helloworld.erl && erl -noshell -s helloworld main -s init stop
         working-directory: ./erlang
 
       - name: Configure Go
@@ -152,7 +152,7 @@ jobs:
         run: Rscript HelloWorld.r
         working-directory: ./r
 
-      - name: Configure Racket 8.5
+      - name: Configure Racket
         uses: Bogdanp/setup-racket@v1.9
         with:
           version: 8.5 # required

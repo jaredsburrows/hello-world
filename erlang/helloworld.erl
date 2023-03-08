@@ -1,5 +1,5 @@
 -module(helloworld).
--export([start/0]).
+-export([main/0]).
 
-start() ->
+main() ->
     io:fwrite("Hello, World!").

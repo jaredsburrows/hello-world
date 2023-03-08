@@ -76,7 +76,7 @@ jobs:
           otp-version: 25.2 # required
 
       - name: Erlang
-        run: erlc helloworld.erl && erl -noshell -s helloworld start -s init stop
+        run: erlc helloworld.erl && erl -noshell -s helloworld main -s init stop
         working-directory: ./erlang
 
       - name: Configure Go
@@ -85,6 +85,15 @@ jobs:
       - name: Go
         run: go build HelloWorld.go && ./HelloWorld
         working-directory: ./go
+
+      - name: Configure Groovy
+        uses: wtfjoke/setup-groovy@v1.1.1
+        with:
+          groovy-version: 4.x # required
+
+      - name: Groovy
+        run: groovy HelloWorld.groovy
+        working-directory: ./groovy
 
       - name: Configure Haskell
         uses: haskell/actions/setup@v2
@@ -152,7 +161,7 @@ jobs:
         run: Rscript HelloWorld.r
         working-directory: ./r
 
-      - name: Configure Racket 8.5
+      - name: Configure Racket
         uses: Bogdanp/setup-racket@v1.9
         with:
           version: 8.5 # required

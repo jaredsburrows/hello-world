@@ -8,7 +8,7 @@ on:
     types: [ opened, labeled, unlabeled, synchronize ]
 
 jobs:
-  bot:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -53,6 +53,13 @@ jobs:
       - name: C++
         run: g++ HelloWorld.cpp -o HelloWorld && ./HelloWorld
         working-directory: ./cpp
+
+      - name: Configure D
+        uses: dlang-community/setup-dlang@v1.3.0
+
+      - name: D
+        run: dmd HelloWorld.d && ./HelloWorld
+        working-directory: ./d
 
       - name: Configure Dart
         uses: dart-lang/setup-dart@v1.4

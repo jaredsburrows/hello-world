@@ -34,6 +34,15 @@ jobs:
         run: gcc HelloWorld.c -o HelloWorld && ./HelloWorld
         working-directory: ./c
 
+      - name: Configure Clojure
+        uses: DeLaGuardo/setup-clojure@10.2
+        with:
+          cli: 1.10.1.693 # required
+
+      - name: Clojure
+        run: clojure -M HelloWorld.clj
+        working-directory: ./clojure
+
       - name: Configure Cobol
         uses: fabasoad/setup-cobol-action@v1.4.1
 

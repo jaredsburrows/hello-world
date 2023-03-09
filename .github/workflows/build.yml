@@ -133,6 +133,13 @@ jobs:
         run: kotlinc HelloWorld.kt && kotlin HelloWorldKt
         working-directory: ./kotlin
 
+      - name: Configure Lisp
+        uses: cheeze2000/setup-sbcl@v1
+
+      - name: Lisp
+        run: sbcl --script HelloWorld.lisp
+        working-directory: ./lisp
+
       - name: Configure Lua
         uses: xpol/setup-lua@v0.3
 

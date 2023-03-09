@@ -2,4 +2,4 @@
 -export([main/0]).
 
 main() ->
-    io:fwrite("Hello, World!").
+  io:fwrite("Hello, World!").

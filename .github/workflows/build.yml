@@ -156,6 +156,13 @@ jobs:
         run: perl HelloWorld.pl
         working-directory: ./perl
 
+      - name: Configure PHP
+        uses: shivammathur/setup-php@v2
+
+      - name: PHP
+        run: php HelloWorld.php
+        working-directory: ./php
+
       - name: Configure Python
         uses: actions/setup-python@v4.5.0
 

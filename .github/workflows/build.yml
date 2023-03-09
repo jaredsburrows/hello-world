@@ -31,7 +31,7 @@ jobs:
           cc: 1
 
       - name: C
-        run: gcc HelloWorld.c -o HelloWorld && ./HelloWorld
+        run: gcc HelloWorld.c -o HelloWorld.out && ./HelloWorld.out
         working-directory: ./c
 
       - name: Configure Clojure
@@ -47,18 +47,18 @@ jobs:
         uses: fabasoad/setup-cobol-action@v1.4.1
 
       - name: Cobol
-        run: cobc -x -free -o HelloWorld HelloWorld.cbl && ./HelloWorld
+        run: cobc -x -free -o HelloWorld.out HelloWorld.cbl && ./HelloWorld.out
         working-directory: ./cobol
 
       - name: C++
-        run: g++ HelloWorld.cpp -o HelloWorld && ./HelloWorld
+        run: g++ HelloWorld.cpp -o HelloWorld.out && ./HelloWorld.out
         working-directory: ./cpp
 
       - name: Configure D
         uses: dlang-community/setup-dlang@v1.3.0
 
       - name: D
-        run: dmd HelloWorld.d && ./HelloWorld
+        run: dmd HelloWorld.d -of=HelloWorld.out && ./HelloWorld.out
         working-directory: ./d
 
       - name: Configure Dart
@@ -83,7 +83,7 @@ jobs:
         uses: actions/setup-go@v3
 
       - name: Go
-        run: go build HelloWorld.go && ./HelloWorld
+        run: go build -o HelloWorld.out HelloWorld.go && ./HelloWorld.out
         working-directory: ./go
 
       - name: Configure Groovy
@@ -99,7 +99,7 @@ jobs:
         uses: haskell/actions/setup@v2
 
       - name: Haskell
-        run: ghc HelloWorld.hs -o HelloWorld && ./HelloWorld
+        run: ghc HelloWorld.hs -o HelloWorld.out && ./HelloWorld.out
         working-directory: ./haskell
 
       - name: Configure JDK
@@ -137,8 +137,17 @@ jobs:
         uses: egor-tensin/setup-clang@v1
 
       - name: Objective-C
-        run: clang HelloWorld.m -o HelloWorld && ./HelloWorld
+        run: clang HelloWorld.m -o HelloWorld.out && ./HelloWorld.out
         working-directory: ./objective-c
+
+      - name: Configure OCaml
+        uses: ocaml/setup-ocaml@v2.0.11
+        with:
+          ocaml-compiler: 5.0.0 # required
+
+      - name: OCaml
+        run: opam init && eval $(opam env) && ocamlc HelloWorld.ml -o HelloWorld.out && ./HelloWorld.out
+        working-directory: ./ocaml
 
       - name: Configure Perl
         uses: shogo82148/actions-setup-perl@v1.20.1
@@ -186,14 +195,14 @@ jobs:
           rust-version: stable # required
 
       - name: Rust
-        run: rustc HelloWorld.rs && ./HelloWorld
+        run: rustc HelloWorld.rs -o HelloWorld.out && ./HelloWorld.out
         working-directory: ./rust
 
       - name: Configure Swift
         uses: swift-actions/setup-swift@v1
 
       - name: Swift
-        run: swiftc HelloWorld.swift && ./HelloWorld
+        run: swiftc HelloWorld.swift -o HelloWorld.out && ./HelloWorld.out
         working-directory: ./swift
 
       - name: TypeScript

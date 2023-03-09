@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/android,androidstudio,c,c++,dart,erlang,go,haskell,intellij,intellij+all,intellij+iml,java,kotlin,linux,macos,objective-c,perl,python,racket,ruby,rust,swift,windows
-# Edit at https://www.toptal.com/developers/gitignore?templates=android,androidstudio,c,c++,dart,erlang,go,haskell,intellij,intellij+all,intellij+iml,java,kotlin,linux,macos,objective-c,perl,python,racket,ruby,rust,swift,windows
+# Created by https://www.toptal.com/developers/gitignore/api/android,androidstudio,c,c++,clojure,d,dart,erlang,go,groovy,haskell,intellij,intellij+all,intellij+iml,java,kotlin,linux,macos,objective-c,ocaml,perl,python,racket,ruby,rust,swift,windows
+# Edit at https://www.toptal.com/developers/gitignore?templates=android,androidstudio,c,c++,clojure,d,dart,erlang,go,groovy,haskell,intellij,intellij+all,intellij+iml,java,kotlin,linux,macos,objective-c,ocaml,perl,python,racket,ruby,rust,swift,windows
 
 ### Android ###
 # Gradle files
@@ -115,6 +115,47 @@ dkms.conf
 
 # Executables
 
+### Clojure ###
+pom.xml
+pom.xml.asc
+*.jar
+*.class
+/lib/
+/classes/
+/target/
+/checkouts/
+.lein-deps-sum
+.lein-repl-history
+.lein-plugins/
+.lein-failures
+.nrepl-port
+.cpcache/
+
+### D ###
+# Compiled Object files
+
+# Compiled Dynamic libraries
+
+# Compiled Static libraries
+
+# Executables
+
+# DUB
+.dub
+docs.json
+__dummy.html
+docs/
+
+# Code coverage
+*.lst
+
+### D Patch ###
+# Test Executables
+*-test-*
+
+# Comment to allow dub lock file to be version controlled as well
+dub.selections.json
+
 ### Dart ###
 # See https://www.dartlang.org/guides/libraries/private-files
 
@@ -185,6 +226,28 @@ rebar3.crashdump
 
 # Go workspace file
 go.work
+
+### Groovy ###
+# .gitignore created from Groovy contributors in https://github.com/apache/groovy/blob/master/.gitignore
+
+user.gradle
+target/
+out/
+
+*.DS_Store
+*.swp
+*~
+
+.idea
+*.ipr
+*.iws
+.shelf
+
+.settings/
+.classpath
+.project
+bin/
+
 
 ### Haskell ###
 dist
@@ -260,10 +323,8 @@ cmake-build-*/
 .idea/**/mongoSettings.xml
 
 # File-based project format
-*.iws
 
 # IntelliJ
-out/
 
 # mpeltonen/sbt-idea plugin
 .idea_modules/
@@ -435,11 +496,9 @@ fabric.properties
 
 modules.xml
 .idea/misc.xml
-*.ipr
 
 ### Java ###
 # Compiled class file
-*.class
 
 # Log file
 
@@ -450,7 +509,6 @@ modules.xml
 .mtj.tmp/
 
 # Package Files #
-*.jar
 *.war
 *.nar
 *.ear
@@ -476,7 +534,6 @@ replay_pid*
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 
 ### Linux ###
-*~
 
 # temporary files which can be created if a process still has a handle open of a deleted file
 .fuse_hidden*
@@ -587,6 +644,34 @@ iOSInjectionProject/
 
 ### Objective-C Patch ###
 
+### OCaml ###
+*.annot
+*.cmo
+*.cma
+*.cmi
+*.cmx
+*.cmxs
+*.cmxa
+
+# ocamlbuild working directory
+
+# ocamlbuild targets
+*.byte
+*.native
+
+# oasis generated files
+setup.data
+setup.log
+
+# Merlin configuring file for Vim and Emacs
+.merlin
+
+# Dune generated files
+*.install
+
+# Local OPAM switch
+_opam/
+
 ### Perl ###
 !Build/
 .last_cover_stats
@@ -695,7 +780,6 @@ docs/_build/
 
 # PyBuilder
 .pybuilder/
-target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
@@ -969,7 +1053,6 @@ $RECYCLE.BIN/
 # Java class files
 
 # Generated files
-bin/
 gen/
 
 # Gradle files
@@ -992,7 +1075,6 @@ proguard/
 /*/*/build
 /*/*/production
 .navigation/
-*.swp
 
 # Keystore files
 
@@ -1036,10 +1118,7 @@ obj/
 .idea/navEditor.xml
 
 # Legacy Eclipse project files
-.classpath
-.project
 .cproject
-.settings/
 
 # Mobile Tools for Java (J2ME)
 
@@ -1062,4 +1141,4 @@ obj/
 
 !/gradle/wrapper/gradle-wrapper.jar
 
-# End of https://www.toptal.com/developers/gitignore/api/android,androidstudio,c,c++,dart,erlang,go,haskell,intellij,intellij+all,intellij+iml,java,kotlin,linux,macos,objective-c,perl,python,racket,ruby,rust,swift,windows
+# End of https://www.toptal.com/developers/gitignore/api/android,androidstudio,c,c++,clojure,d,dart,erlang,go,groovy,haskell,intellij,intellij+all,intellij+iml,java,kotlin,linux,macos,objective-c,ocaml,perl,python,racket,ruby,rust,swift,windows

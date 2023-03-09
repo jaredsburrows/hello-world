@@ -205,6 +205,15 @@ jobs:
         run: rustc HelloWorld.rs -o HelloWorld.out && ./HelloWorld.out
         working-directory: ./rust
 
+      - name: Configure Scala
+        uses: coursier/setup-action@v1
+        with:
+          apps: scala
+
+      - name: Scala
+        run: scala HelloWorld.scala
+        working-directory: ./scala
+
       - name: Configure Swift
         uses: swift-actions/setup-swift@v1
 

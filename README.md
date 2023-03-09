@@ -6,6 +6,7 @@ Compiling "Hello, World!" in multiple languages with Github Actions.
 
 | Language                                                                                                                                           | Compiler      | Github Action                                                                     |
 |----------------------------------------------------------------------------------------------------------------------------------------------------|---------------|-----------------------------------------------------------------------------------|
+| [Assembly](https://www.nasm.us/)                                                                                                                   | nasm          | [ilammy/setup-nasm](https://github.com/ilammy/setup-nasm)                         |
 | [Awk](https://gnu.org/software/gawk/manual/gawk.html)                                                                                              | awk           | N/A (Apart of the Linux/Mac Shell)                                                |
 | [Bash](https://gnu.org/software/bash/)                                                                                                             | bash          | N/A (Apart of the Linux/Mac Shell)                                                |
 | [C](https://open-std.org/jtc1/sc22/wg14/)                                                                                                          | gcc           | [egor-tensin/setup-gcc](https://github.com/egor-tensin/setup-gcc)                 |

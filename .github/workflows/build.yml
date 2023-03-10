@@ -41,6 +41,13 @@ jobs:
         run: gcc HelloWorld.c -o HelloWorld.out && ./HelloWorld.out
         working-directory: ./c
 
+      - name: Configure C#
+        uses: actions/setup-dotnet@v3
+
+      - name: C#
+        run: csc HelloWorld.cs && mono HelloWorld.exe
+        working-directory: ./c#
+
       - name: Configure Clojure
         uses: DeLaGuardo/setup-clojure@10.2
         with:

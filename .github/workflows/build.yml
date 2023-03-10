@@ -109,6 +109,13 @@ jobs:
         run: ghc HelloWorld.hs -o HelloWorld.out && ./HelloWorld.out
         working-directory: ./haskell
 
+      - name: Configure HTML
+        run: sudo apt-get install lynx
+
+      - name: HTML
+        run: lynx -dump HelloWorld.html
+        working-directory: ./html
+
       - name: Configure JDK
         uses: actions/setup-java@v3.10.0
         with:

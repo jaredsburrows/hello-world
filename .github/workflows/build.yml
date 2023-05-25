@@ -192,7 +192,7 @@ jobs:
         working-directory: ./php
 
       - name: Configure Python
-        uses: actions/setup-python@v4.6.0
+        uses: actions/setup-python@v4.6.1
 
       - name: Python
         run: python HelloWorld.py

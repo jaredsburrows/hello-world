@@ -178,7 +178,7 @@ jobs:
         working-directory: ./ocaml
 
       - name: Configure Perl
-        uses: shogo82148/actions-setup-perl@v1.22.0
+        uses: shogo82148/actions-setup-perl@v1.23.0
 
       - name: Perl
         run: perl HelloWorld.pl

@@ -141,7 +141,7 @@ jobs:
         working-directory: ./javascript
 
       - name: Configure Kotlin
-        uses: fwilhe2/setup-kotlin@0.6.0
+        uses: fwilhe2/setup-kotlin@0.9.0
 
       - name: Kotlin
         run: kotlinc HelloWorld.kt && kotlin HelloWorldKt

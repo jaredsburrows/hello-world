@@ -177,12 +177,8 @@ jobs:
         run: opam init && eval $(opam env) && ocamlc HelloWorld.ml -o HelloWorld.out && ./HelloWorld.out
         working-directory: ./ocaml
 
-      # - name: Configure Pascal
-      #   uses: fabasoad/pascal-action@v1.0.3 # should be using fpc? fpc HelloWorld.pas -oHelloWorld.out && ./HelloWorld.out
-      #   with:
-      #     path: pascal/HelloWorld.pas
-
-      - uses: fabasoad/pascal-action@main
+      - name: Configure Pascal
+        uses: fabasoad/pascal-action@v1.1.1 # should be using fpc? fpc HelloWorld.pas -oHelloWorld.out && ./HelloWorld.out
         id: pascal
         with:
           path: pascal/HelloWorld.pas

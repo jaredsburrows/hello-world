@@ -177,6 +177,13 @@ jobs:
         run: opam init && eval $(opam env) && ocamlc HelloWorld.ml -o HelloWorld.out && ./HelloWorld.out
         working-directory: ./ocaml
 
+      - name: Configure Pascal
+        uses: fabasoad/pascal-action@v1.1.1 # should be using fpc? fpc HelloWorld.pas -oHelloWorld.out && ./HelloWorld.out
+        id: pascal
+        with:
+          path: pascal/HelloWorld.pas
+      - run: echo "${{ steps.pascal.outputs.result }}"
+
       - name: Configure Perl
         uses: shogo82148/actions-setup-perl@v1.24.1
 
@@ -224,7 +231,7 @@ jobs:
         run: ruby HelloWorld.rb
         working-directory: ./ruby
 
-      - name: Confgure Rust
+      - name: Configure Rust
         uses: ATiltedTree/setup-rust@v1.0.5
         with:
           rust-version: stable # required

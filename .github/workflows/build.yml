@@ -13,7 +13,7 @@ jobs:
 
     steps:
       - name: Checkout Project
-        uses: actions/checkout@v3.3.0
+        uses: actions/checkout@v4.1.1
 
       - name: Configure Assembly
         uses: ilammy/setup-nasm@v1
@@ -41,8 +41,15 @@ jobs:
         run: gcc HelloWorld.c -o HelloWorld.out && ./HelloWorld.out
         working-directory: ./c
 
+      - name: Configure C#
+        uses: actions/setup-dotnet@v3
+
+      - name: C#
+        run: csc HelloWorld.cs && mono HelloWorld.exe
+        working-directory: ./c#
+
       - name: Configure Clojure
-        uses: DeLaGuardo/setup-clojure@10.2
+        uses: DeLaGuardo/setup-clojure@12.1
         with:
           cli: 1.10.1.693 # required
 
@@ -51,7 +58,7 @@ jobs:
         working-directory: ./clojure
 
       - name: Configure Cobol
-        uses: fabasoad/setup-cobol-action@v1.4.1
+        uses: fabasoad/setup-cobol-action@v1.4.3
 
       - name: Cobol
         run: cobc -x -free -o HelloWorld.out HelloWorld.cbl && ./HelloWorld.out
@@ -59,7 +66,7 @@ jobs:
 
       - name: C++
         run: g++ HelloWorld.cpp -o HelloWorld.out && ./HelloWorld.out
-        working-directory: ./cpp
+        working-directory: ./c++
 
       - name: Configure D
         uses: dlang-community/setup-dlang@v1.3.0
@@ -78,7 +85,7 @@ jobs:
         working-directory: ./dart
 
       - name: Configure Erlang
-        uses: erlef/setup-beam@v1.15.2
+        uses: erlef/setup-beam@v1.16.0
         with:
           otp-version: 25.2 # required
 
@@ -87,14 +94,14 @@ jobs:
         working-directory: ./erlang
 
       - name: Configure Go
-        uses: actions/setup-go@v3
+        uses: actions/setup-go@v4
 
       - name: Go
         run: go build -o HelloWorld.out HelloWorld.go && ./HelloWorld.out
         working-directory: ./go
 
       - name: Configure Groovy
-        uses: wtfjoke/setup-groovy@v1.1.1
+        uses: wtfjoke/setup-groovy@v2.0.0
         with:
           groovy-version: 4.x # required
 
@@ -109,12 +116,15 @@ jobs:
         run: ghc HelloWorld.hs -o HelloWorld.out && ./HelloWorld.out
         working-directory: ./haskell
 
+      - name: Configure HTML
+        run: sudo apt-get install lynx
+
       - name: HTML
         run: lynx -dump HelloWorld.html
         working-directory: ./html
 
       - name: Configure JDK
-        uses: actions/setup-java@v3.10.0
+        uses: actions/setup-java@v3.13.0
         with:
           distribution: temurin
           java-version: 19 # required
@@ -131,7 +141,7 @@ jobs:
         working-directory: ./javascript
 
       - name: Configure Kotlin
-        uses: fwilhe2/setup-kotlin@0.5.0
+        uses: fwilhe2/setup-kotlin@0.9.0
 
       - name: Kotlin
         run: kotlinc HelloWorld.kt && kotlin HelloWorldKt
@@ -159,7 +169,7 @@ jobs:
         working-directory: ./objective-c
 
       - name: Configure OCaml
-        uses: ocaml/setup-ocaml@v2.0.11
+        uses: ocaml/setup-ocaml@v2.1.0
         with:
           ocaml-compiler: 5.0.0 # required
 
@@ -173,7 +183,7 @@ jobs:
           path: pascal/HelloWorld.pas
 
       - name: Configure Perl
-        uses: shogo82148/actions-setup-perl@v1.20.1
+        uses: shogo82148/actions-setup-perl@v1.24.1
 
       - name: Perl
         run: perl HelloWorld.pl
@@ -187,7 +197,7 @@ jobs:
         working-directory: ./php
 
       - name: Configure Python
-        uses: actions/setup-python@v4.5.0
+        uses: actions/setup-python@v4.7.1
 
       - name: Python
         run: python HelloWorld.py
@@ -201,7 +211,7 @@ jobs:
         working-directory: ./r
 
       - name: Configure Racket
-        uses: Bogdanp/setup-racket@v1.9
+        uses: Bogdanp/setup-racket@v1.10
         with:
           version: 8.5 # required
 

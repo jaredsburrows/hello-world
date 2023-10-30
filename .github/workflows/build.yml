@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v4.1.1
 
       - name: Configure Assembly
-        uses: ilammy/setup-nasm@v1
+        uses: ilammy/setup-nasm@v1.4.0
 
       - name: Assembly
         run: nasm -f elf64 -g -F DWARF HelloWorld.asm && ld -e start -o HelloWorld.out HelloWorld.o && ./HelloWorld.out
@@ -31,7 +31,7 @@ jobs:
         working-directory: ./bash
 
       - name: Configure GCC and G++
-        uses: egor-tensin/setup-gcc@v1
+        uses: egor-tensin/setup-gcc@v1.3
         with:
           version: latest
           platform: x64
@@ -42,7 +42,7 @@ jobs:
         working-directory: ./c
 
       - name: Configure C#
-        uses: actions/setup-dotnet@v3
+        uses: actions/setup-dotnet@v3.2.0
 
       - name: C#
         run: csc HelloWorld.cs && mono HelloWorld.exe
@@ -76,7 +76,7 @@ jobs:
         working-directory: ./d
 
       - name: Configure Dart
-        uses: dart-lang/setup-dart@v1.4
+        uses: dart-lang/setup-dart@v1.6.0
         with:
           sdk: stable
 
@@ -94,7 +94,7 @@ jobs:
         working-directory: ./erlang
 
       - name: Configure Go
-        uses: actions/setup-go@v4
+        uses: actions/setup-go@v4.1.0
 
       - name: Go
         run: go build -o HelloWorld.out HelloWorld.go && ./HelloWorld.out
@@ -110,7 +110,7 @@ jobs:
         working-directory: ./groovy
 
       - name: Configure Haskell
-        uses: haskell/actions/setup@v2
+        uses: haskell/actions/setup@v2.4.7
 
       - name: Haskell
         run: ghc HelloWorld.hs -o HelloWorld.out && ./HelloWorld.out
@@ -162,7 +162,7 @@ jobs:
         working-directory: ./lua
 
       - name: Configure Clang
-        uses: egor-tensin/setup-clang@v1
+        uses: egor-tensin/setup-clang@v1.4
 
       - name: Objective-C
         run: clang HelloWorld.m -o HelloWorld.out && ./HelloWorld.out
@@ -241,7 +241,7 @@ jobs:
         working-directory: ./rust
 
       - name: Configure Scala
-        uses: coursier/setup-action@v1
+        uses: coursier/setup-action@v1.3.4
         with:
           apps: scala
 
@@ -250,7 +250,7 @@ jobs:
         working-directory: ./scala
 
       - name: Configure Swift
-        uses: swift-actions/setup-swift@v1
+        uses: swift-actions/setup-swift@v1.25.0
 
       - name: Swift
         run: swiftc HelloWorld.swift -o HelloWorld.out && ./HelloWorld.out

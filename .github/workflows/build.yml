@@ -94,7 +94,7 @@ jobs:
         working-directory: ./erlang
 
       - name: Configure Go
-        uses: actions/setup-go@v4.1.0
+        uses: actions/setup-go@v5.0.0
 
       - name: Go
         run: go build -o HelloWorld.out HelloWorld.go && ./HelloWorld.out

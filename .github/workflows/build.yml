@@ -169,7 +169,7 @@ jobs:
         working-directory: ./objective-c
 
       - name: Configure OCaml
-        uses: ocaml/setup-ocaml@v2.2.0
+        uses: ocaml/setup-ocaml@v2.2.3
         with:
           ocaml-compiler: 5.0.0 # required
 

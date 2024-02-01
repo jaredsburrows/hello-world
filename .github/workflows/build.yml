@@ -85,7 +85,7 @@ jobs:
         working-directory: ./dart
 
       - name: Configure Erlang
-        uses: erlef/setup-beam@v1.17.1
+        uses: erlef/setup-beam@v1.17.2
         with:
           otp-version: 25.2 # required
 

@@ -241,7 +241,7 @@ jobs:
         working-directory: ./rust
 
       - name: Configure Scala
-        uses: coursier/setup-action@v1.3.4
+        uses: coursier/setup-action@v1.3.5
         with:
           apps: scala
 

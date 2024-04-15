@@ -76,7 +76,7 @@ jobs:
         working-directory: ./d
 
       - name: Configure Dart
-        uses: dart-lang/setup-dart@v1.6.2
+        uses: dart-lang/setup-dart@v1.6.4
         with:
           sdk: stable
 

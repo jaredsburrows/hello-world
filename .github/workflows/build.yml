@@ -232,9 +232,7 @@ jobs:
         working-directory: ./ruby
 
       - name: Configure Rust
-        uses: ATiltedTree/setup-rust@v1.0.5
-        with:
-          rust-version: stable # required
+        uses: actions-rust-lang/setup-rust-toolchain@v1.8.0
 
       - name: Rust
         run: rustc HelloWorld.rs -o HelloWorld.out && ./HelloWorld.out

@@ -69,7 +69,7 @@ jobs:
         working-directory: ./c++
 
       - name: Configure D
-        uses: dlang-community/setup-dlang@v1.4.0
+        uses: dlang-community/setup-dlang@v2.0.0
 
       - name: D
         run: dmd HelloWorld.d -of=HelloWorld.out && ./HelloWorld.out

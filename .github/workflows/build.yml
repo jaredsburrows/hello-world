@@ -101,7 +101,7 @@ jobs:
         working-directory: ./go
 
       - name: Configure Groovy
-        uses: wtfjoke/setup-groovy@v2.0.0
+        uses: wtfjoke/setup-groovy@v2.0.1
         with:
           groovy-version: 4.x # required
 

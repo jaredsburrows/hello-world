@@ -93,6 +93,10 @@ jobs:
         run: erlc helloworld.erl && erl -noshell -s helloworld main -s init stop
         working-directory: ./erlang
 
+      - name: F#
+        run: fsc HelloWorld.fs && mono HelloWorld.exe
+        working-directory: ./f#
+
       - name: Configure Go
         uses: actions/setup-go@v5.0.1
 

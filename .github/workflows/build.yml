@@ -42,7 +42,7 @@ jobs:
         working-directory: ./c
 
       - name: Configure C#
-        uses: actions/setup-dotnet@v4.0.0
+        uses: actions/setup-dotnet@v4.0.1
 
       - name: C#
         run: csc HelloWorld.cs && mono HelloWorld.exe

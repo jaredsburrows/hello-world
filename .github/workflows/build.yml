@@ -58,7 +58,7 @@ jobs:
         working-directory: ./clojure
 
       - name: Configure Cobol
-        uses: fabasoad/setup-cobol-action@v1.4.4
+        uses: fabasoad/setup-cobol-action@v1.4.5
 
       - name: Cobol
         run: cobc -x -free -o HelloWorld.out HelloWorld.cbl && ./HelloWorld.out

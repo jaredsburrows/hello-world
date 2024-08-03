@@ -178,7 +178,7 @@ jobs:
         working-directory: ./ocaml
 
       - name: Configure Pascal
-        uses: fabasoad/pascal-action@v1.1.2 # should be using fpc? fpc HelloWorld.pas -oHelloWorld.out && ./HelloWorld.out
+        uses: fabasoad/pascal-action@v1.1.3 # should be using fpc? fpc HelloWorld.pas -oHelloWorld.out && ./HelloWorld.out
         id: pascal
         with:
           path: pascal/HelloWorld.pas

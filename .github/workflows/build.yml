@@ -161,6 +161,14 @@ jobs:
         run: lua HelloWorld.lua
         working-directory: ./lua
 
+      - name: Setup MATLAB
+        uses: matlab-actions/setup-matlab@v2.2.0
+
+      - name: Run MATLAB script
+        uses: matlab-actions/run-build@v2.4.1
+        with:
+          command: "matlab/helloworld"
+
       - name: Configure Clang
         uses: egor-tensin/setup-clang@v1.4
 

@@ -93,6 +93,16 @@ jobs:
         run: erlc helloworld.erl && erl -noshell -s helloworld main -s init stop
         working-directory: ./erlang
 
+      - name: Setup Fortran
+        uses: fortran-lang/setup-fortran@v1.6.1
+        with:
+          compiler: gcc
+          version: 13
+
+      - name: Fortran
+        run: gfortran -o helloworld ./helloworld.f90 && ./helloworld
+        working-directory: ./fortran
+
       - name: Configure Go
         uses: actions/setup-go@v5.0.2
 

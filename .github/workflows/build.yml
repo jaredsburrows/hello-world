@@ -96,6 +96,13 @@ jobs:
         run: erlc helloworld.erl && erl -noshell -s helloworld main -s init stop
         working-directory: ./erlang
 
+      - name: Setup F#
+        run: dotnet new console -lang F# -n f#
+
+      - name: F#
+        run: rm Program.fs && sed -i 's/Program.fs/HelloWorld.fs/' f\#.fsproj && dotnet build && dotnet run
+        working-directory: ./f#
+
       - name: Setup Fortran
         uses: fortran-lang/setup-fortran@v1.6.1
         with:

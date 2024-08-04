@@ -44,8 +44,11 @@ jobs:
       - name: Configure C#
         uses: actions/setup-dotnet@v4.0.1
 
+      - name: Setup C#
+        run: dotnet new console -lang C# -n c#
+
       - name: C#
-        run: csc HelloWorld.cs && mono HelloWorld.exe
+        run: rm Program.cs && dotnet build && dotnet run
         working-directory: ./c#
 
       - name: Configure Clojure

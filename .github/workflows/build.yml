@@ -123,7 +123,7 @@ jobs:
         working-directory: ./groovy
 
       - name: Configure Haskell
-        uses: haskell/actions/setup@v2.4.7
+        uses: haskell-actions/setup@v2.7.5
 
       - name: Haskell
         run: ghc HelloWorld.hs -o HelloWorld.out && ./HelloWorld.out

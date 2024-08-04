@@ -27,8 +27,18 @@ jobs:
         working-directory: ./awk
 
       - name: Bash
-        run: bash HelloWorld.sh
+        run: bash hello_world.sh
         working-directory: ./bash
+
+      - name: Install Wine
+        run: |
+          sudo dpkg --add-architecture i386
+          sudo apt update
+          sudo apt install -y wine64 wine32
+
+      - name: Batch
+        run: wine cmd /c hello_world.bat
+        working-directory: ./batch
 
       - name: Configure GCC and G++
         uses: egor-tensin/setup-gcc@v1.3

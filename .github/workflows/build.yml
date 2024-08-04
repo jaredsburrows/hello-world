@@ -218,6 +218,11 @@ jobs:
         run: php HelloWorld.php
         working-directory: ./php
 
+      - name: PowerShell
+        run: ./Helloworld.ps1
+        shell: pwsh
+        working-directory: ./powershell
+
       - name: Configure Python
         uses: actions/setup-python@v5.1.1
         with:

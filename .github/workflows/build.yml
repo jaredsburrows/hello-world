@@ -108,6 +108,8 @@ jobs:
 
       - name: Configure Go
         uses: actions/setup-go@v5.0.2
+        with:
+          go-version: 1.22.x
 
       - name: Go
         run: go build -o HelloWorld.out HelloWorld.go && ./HelloWorld.out

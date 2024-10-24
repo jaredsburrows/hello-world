@@ -52,7 +52,7 @@ jobs:
         working-directory: ./c
 
       - name: Configure C#
-        uses: actions/setup-dotnet@v4.0.1
+        uses: actions/setup-dotnet@v4.1.0
 
       - name: Setup C#
         run: dotnet new console -lang C# -n c#

@@ -219,7 +219,7 @@ jobs:
       - run: echo "${{ steps.pascal.outputs.result }}"
 
       - name: Configure Perl
-        uses: shogo82148/actions-setup-perl@v1.31.3
+        uses: shogo82148/actions-setup-perl@v1.31.4
 
       - name: Perl
         run: perl HelloWorld.pl

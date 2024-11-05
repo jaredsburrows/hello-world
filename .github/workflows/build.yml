@@ -62,7 +62,7 @@ jobs:
         working-directory: ./c#
 
       - name: Configure Clojure
-        uses: DeLaGuardo/setup-clojure@12.5
+        uses: DeLaGuardo/setup-clojure@12.6
         with:
           cli: 1.10.1.693 # required
 

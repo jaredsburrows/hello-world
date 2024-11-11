@@ -1,6 +1,8 @@
 # Hello, World!
 
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 [![build](https://github.com/jaredsburrows/hello-world/actions/workflows/build.yml/badge.svg)](https://github.com/jaredsburrows/hello-world/actions/workflows/build.yml)
+[![Twitter Follow](https://img.shields.io/twitter/follow/jaredsburrows.svg?style=social)](https://twitter.com/jaredsburrows)
 
 Compiling "Hello, World!" in multiple languages with Github Actions.
 

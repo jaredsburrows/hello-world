@@ -203,7 +203,7 @@ jobs:
         working-directory: ./objective-c
 
       - name: Configure OCaml
-        uses: ocaml/setup-ocaml@v3.0.15
+        uses: ocaml/setup-ocaml@v3.1.3
         with:
           ocaml-compiler: 5.0.0 # required
 

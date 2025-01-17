@@ -289,7 +289,7 @@ jobs:
         working-directory: ./scala
 
       - name: Configure Swift
-        uses: swift-actions/setup-swift@v2.1.0
+        uses: swift-actions/setup-swift@v2.2.0
 
       - name: Swift
         run: swiftc HelloWorld.swift -o HelloWorld.out && ./HelloWorld.out

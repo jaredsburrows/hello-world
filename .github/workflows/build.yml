@@ -226,7 +226,7 @@ jobs:
         working-directory: ./perl
 
       - name: Configure PHP
-        uses: shivammathur/setup-php@v2
+        uses: shivammathur/setup-php@v2.32.0
 
       - name: PHP
         run: php HelloWorld.php

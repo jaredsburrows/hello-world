@@ -89,7 +89,7 @@ jobs:
         working-directory: ./d
 
       - name: Configure Dart
-        uses: dart-lang/setup-dart@v1.7.0
+        uses: dart-lang/setup-dart@v1.7.1
         with:
           sdk: stable
 

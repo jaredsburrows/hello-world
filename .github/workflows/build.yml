@@ -144,7 +144,7 @@ jobs:
         working-directory: ./groovy
 
       - name: Configure Haskell
-        uses: haskell-actions/setup@v2.7.10
+        uses: haskell-actions/setup@v2.8.0
 
       - name: Haskell
         run: ghc HelloWorld.hs -o HelloWorld.out && ./HelloWorld.out

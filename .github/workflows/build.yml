@@ -238,7 +238,7 @@ jobs:
         working-directory: ./powershell
 
       - name: Configure Python
-        uses: actions/setup-python@v5.5.0
+        uses: actions/setup-python@v5.6.0
         with:
           python-version: 3.13.2
 

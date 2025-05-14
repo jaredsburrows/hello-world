@@ -254,7 +254,7 @@ jobs:
         working-directory: ./r
 
       - name: Configure Racket
-        uses: Bogdanp/setup-racket@v1.11
+        uses: Bogdanp/setup-racket@v1.13
         with:
           version: 8.5 # required
 

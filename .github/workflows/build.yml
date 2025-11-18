@@ -273,7 +273,7 @@ jobs:
         working-directory: ./ruby
 
       - name: Configure Rust
-        uses: actions-rust-lang/setup-rust-toolchain@v1.13.0
+        uses: actions-rust-lang/setup-rust-toolchain@v1.15.2
 
       - name: Rust
         run: rustc HelloWorld.rs -o HelloWorld.out && ./HelloWorld.out

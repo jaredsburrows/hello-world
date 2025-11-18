@@ -114,7 +114,7 @@ jobs:
         working-directory: ./f#
 
       - name: Setup Fortran
-        uses: fortran-lang/setup-fortran@v1.6.3
+        uses: fortran-lang/setup-fortran@v1.8.0
         with:
           compiler: gcc
           version: 13

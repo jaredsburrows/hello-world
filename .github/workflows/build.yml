@@ -280,7 +280,7 @@ jobs:
         working-directory: ./rust
 
       - name: Configure Scala
-        uses: coursier/setup-action@v1.3.9
+        uses: coursier/setup-action@v2.0.0
         with:
           apps: scala
 

@@ -263,7 +263,7 @@ jobs:
         working-directory: ./racket
 
       - name: Configure Ruby
-        uses: ruby/setup-ruby@v1.268.0
+        uses: ruby/setup-ruby@v1.269.0
         with:
           ruby-version: 3.0 # required
           bundler-cache: true

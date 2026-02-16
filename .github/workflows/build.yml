@@ -41,7 +41,7 @@ jobs:
         working-directory: ./batch
 
       - name: Configure GCC and G++
-        uses: egor-tensin/setup-gcc@v1.3
+        uses: egor-tensin/setup-gcc@v2.0
         with:
           version: latest
           platform: x64

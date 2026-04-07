@@ -196,7 +196,7 @@ jobs:
         working-directory: ./lua
 
       - name: Configure Clang
-        uses: egor-tensin/setup-clang@v2.1
+        uses: egor-tensin/setup-clang@v2.2
 
       - name: Objective-C
         run: clang HelloWorld.m -o HelloWorld.out && ./HelloWorld.out

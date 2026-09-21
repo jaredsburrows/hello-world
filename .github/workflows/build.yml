@@ -100,7 +100,7 @@ jobs:
       - name: Configure Erlang
         uses: erlef/setup-beam@v1.24.1
         with:
-          otp-version: 25.3.2 # required
+          otp-version: 29.1 # required
 
       - name: Erlang
         run: erlc helloworld.erl && erl -noshell -s helloworld main -s init stop

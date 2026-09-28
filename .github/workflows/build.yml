@@ -71,7 +71,7 @@ jobs:
         working-directory: ./clojure
 
       - name: Configure Cobol
-        uses: fabasoad/setup-cobol-action@v1.6.2
+        uses: fabasoad/setup-cobol-action@v1.6.3
 
       - name: Cobol
         run: cobc -x -free -o HelloWorld.out HelloWorld.cbl && ./HelloWorld.out
@@ -100,7 +100,7 @@ jobs:
       - name: Configure Erlang
         uses: erlef/setup-beam@v1.24.1
         with:
-          otp-version: 29.1 # required
+          otp-version: 29.1.1 # required
 
       - name: Erlang
         run: erlc helloworld.erl && erl -noshell -s helloworld main -s init stop
@@ -144,7 +144,7 @@ jobs:
         working-directory: ./groovy
 
       - name: Configure Haskell
-        uses: haskell-actions/setup@v2.12.0
+        uses: haskell-actions/setup@v2.12.1
 
       - name: Haskell
         run: ghc HelloWorld.hs -o HelloWorld.out && ./HelloWorld.out
@@ -263,7 +263,7 @@ jobs:
         working-directory: ./racket
 
       - name: Configure Ruby
-        uses: ruby/setup-ruby@v1.324.0
+        uses: ruby/setup-ruby@v1.327.0
         with:
           ruby-version: 3.0 # required
           bundler-cache: true

@@ -161,7 +161,7 @@ jobs:
         uses: actions/setup-java@v6.0.1
         with:
           distribution: temurin
-          java-version: 19 # required
+          java-version: 25 # required
 
       - name: Java
         run: javac HelloWorld.java && java HelloWorld

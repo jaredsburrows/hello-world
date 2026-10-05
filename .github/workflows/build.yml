@@ -265,7 +265,7 @@ jobs:
       - name: Configure Ruby
         uses: ruby/setup-ruby@v1.327.0
         with:
-          ruby-version: 3.0 # required
+          ruby-version: 4.0 # required
           bundler-cache: true
 
       - name: Ruby

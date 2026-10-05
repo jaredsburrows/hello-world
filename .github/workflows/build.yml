@@ -175,7 +175,7 @@ jobs:
         working-directory: ./javascript
 
       - name: Configure Kotlin
-        uses: fwilhe2/setup-kotlin@v2.0
+        uses: fwilhe2/setup-kotlin@v2.1
 
       - name: Kotlin
         run: kotlinc HelloWorld.kt && kotlin HelloWorldKt
@@ -219,7 +219,7 @@ jobs:
       - run: echo "${{ steps.pascal.outputs.result }}"
 
       - name: Configure Perl
-        uses: shogo82148/actions-setup-perl@v1.44.0
+        uses: shogo82148/actions-setup-perl@v1.44.2
 
       - name: Perl
         run: perl HelloWorld.pl
@@ -240,7 +240,7 @@ jobs:
       - name: Configure Python
         uses: actions/setup-python@v7.0.0
         with:
-          python-version: 3.14.7
+          python-version: 3.14.8
 
       - name: Python
         run: python HelloWorld.py
@@ -280,7 +280,7 @@ jobs:
         working-directory: ./rust
 
       - name: Configure Scala
-        uses: coursier/setup-action@v3.0.3
+        uses: coursier/setup-action@v3.0.4
         with:
           apps: scala
 

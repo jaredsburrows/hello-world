@@ -240,7 +240,7 @@ jobs:
       - name: Configure Python
         uses: actions/setup-python@v7.0.0
         with:
-          python-version: 3.14.8
+          python-version: 3.15.0
 
       - name: Python
         run: python HelloWorld.py
@@ -263,7 +263,7 @@ jobs:
         working-directory: ./racket
 
       - name: Configure Ruby
-        uses: ruby/setup-ruby@v1.327.0
+        uses: ruby/setup-ruby@v1.328.0
         with:
           ruby-version: 4.0 # required
           bundler-cache: true

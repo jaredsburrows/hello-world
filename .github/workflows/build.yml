@@ -219,7 +219,7 @@ jobs:
       - run: echo "${{ steps.pascal.outputs.result }}"
 
       - name: Configure Perl
-        uses: shogo82148/actions-setup-perl@v1.44.2
+        uses: shogo82148/actions-setup-perl@v1.44.4
 
       - name: Perl
         run: perl HelloWorld.pl
@@ -238,9 +238,9 @@ jobs:
         working-directory: ./powershell
 
       - name: Configure Python
-        uses: actions/setup-python@v7.0.0
+        uses: actions/setup-python@v7.1.0
         with:
-          python-version: 3.15.0
+          python-version: 3.15.1
 
       - name: Python
         run: python HelloWorld.py
@@ -263,7 +263,7 @@ jobs:
         working-directory: ./racket
 
       - name: Configure Ruby
-        uses: ruby/setup-ruby@v1.329.0
+        uses: ruby/setup-ruby@v1.335.0
         with:
           ruby-version: 4.0 # required
           bundler-cache: true

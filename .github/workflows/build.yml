@@ -71,7 +71,7 @@ jobs:
         working-directory: ./clojure
 
       - name: Configure Cobol
-        uses: fabasoad/setup-cobol-action@v1.6.3
+        uses: fabasoad/setup-cobol-action@v1.7.0
 
       - name: Cobol
         run: cobc -x -free -o HelloWorld.out HelloWorld.cbl && ./HelloWorld.out
@@ -114,7 +114,7 @@ jobs:
         working-directory: ./f#
 
       - name: Setup Fortran
-        uses: fortran-lang/setup-fortran@v1.10.0
+        uses: fortran-lang/setup-fortran@v1.11.0
         with:
           compiler: gcc
           version: 13
@@ -203,7 +203,7 @@ jobs:
         working-directory: ./objective-c
 
       - name: Configure OCaml
-        uses: ocaml/setup-ocaml@v3.9.0
+        uses: ocaml/setup-ocaml@v3.9.1
         with:
           ocaml-compiler: 5.0.0 # required
 
@@ -240,7 +240,7 @@ jobs:
       - name: Configure Python
         uses: actions/setup-python@v7.1.0
         with:
-          python-version: 3.15.1
+          python-version: 3.15.2
 
       - name: Python
         run: python HelloWorld.py
@@ -263,7 +263,7 @@ jobs:
         working-directory: ./racket
 
       - name: Configure Ruby
-        uses: ruby/setup-ruby@v1.335.0
+        uses: ruby/setup-ruby@v1.336.0
         with:
           ruby-version: 4.0 # required
           bundler-cache: true
